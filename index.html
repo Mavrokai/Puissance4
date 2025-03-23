@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <title>Puissance 4</title>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
+
     <div class="game-container">
+        <button class="edit-names">Modifier les noms et couleurs</button>
+
         <div class="players">
             <div class="player red"></div>
             <div class="player yellow"></div>
@@ -14,6 +19,33 @@
         <div class="board"></div>
         <button class="reset">Nouvelle partie</button>
     </div>
-    <script src="./script.js"></script>
+
+
+    <div class="modal-overlay">
+        <div class="modal">
+            <h2>Modifier les noms et couleurs</h2>
+            <div class="input-group">
+                <label>Joueur 1 (Rouge):</label>
+                <input type="text" id="player1-name" value="Joueur 1">
+                <label>Couleur :</label>
+                <input type="color" id="player1-color" value="#e74c3c">
+            </div>
+            <div class="input-group">
+                <label>Joueur 2 (Jaune):</label>
+                <input type="text" id="player2-name" value="Joueur 2">
+                <label>Couleur :</label>
+                <input type="color" id="player2-color" value="#f1c40f">
+            </div>
+            <button class="save-names">Enregistrer</button>
+        </div>
+    </div>
+
+
+    <div class="editor-container">
+        <div id="editor" contenteditable="true"></div>
+    </div>
+
+    <script type="module" src="./main.js"></script>
 </body>
+
 </html>
